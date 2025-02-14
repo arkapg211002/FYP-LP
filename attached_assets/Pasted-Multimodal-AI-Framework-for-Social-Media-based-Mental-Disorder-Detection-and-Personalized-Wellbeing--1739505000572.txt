@@ -1,0 +1,53 @@
+Multimodal AI Framework for Social Media based Mental Disorder Detection and Personalized Wellbeing Insights
+This repository contains a comprehensive project aimed at detecting mental health disorders through the analysis of social media posts. It leverages machine learning and deep learning techniques alongside Natural Language Processing (NLP) to classify text data into categories such as Normal, Depression, Anxiety, Bipolar Disorder, and PTSD.
+
+Table of Contents
+Introduction
+Project Features
+Technologies Used
+Setup and Installation
+Usage Guide
+Model Architecture
+Dataset Information
+Introduction
+Mental health disorders affect millions of people globally. With the rise of social media, individuals often unknowingly share insights into their mental health through their posts. This project uses AI techniques to analyze such posts and provide early detection for mental health concerns, enabling better intervention strategies.
+
+Project Features
+Text Analysis: Detect mental health issues based on textual inputs.
+Image Upload Analysis: Extract text from images, analyze it, detect any expression or gestures and classify mental health concerns.
+Video Upload Analysis: Convert video content to audio, process it into text, analyze video frames for text extraction, and perform facial expression recognition to aid classification.
+PDF Upload Analysis: Analyse a typed or handwritten PDF text and predict mental issues
+User Response to Image Shown: Image is shown to user, questions from Rorschach Inkblot Test is asked to gather responses and prediction is done on these responses
+Image Caption: Added feature to generate image descriptions using transformers to aid in mental wellbeing mapping.
+Reddit and Twitter User Analysis: Fetch and classify posts made by Reddit or Twitter users for mental health analysis.
+Audio Input Support: Convert audio extracted from video to text, analyze the tone or mood using MFCC, and classify mental health concerns.
+Multilingual Support: Analyze posts in non-English languages by translating them to English before processing.
+Mental Wellbeing: Map the classified mental issues with wellbeing insights based on Ryff's Scale of Psychological Wellbeing using an association matrix between wellbeing parameters and mental health issues.
+Visualization: Generate confusion matrices and performance metrics for each model.
+Ensemble Model: Leveraged high accuracy of Logistic regression, Naive Bayes, SVM, LSTM, Transformer and XGBoost to create an ensemble model with accuracy of 98.2% (train-test split) and 98.07% (Stratified K-Fold Cross Validation). Used this model in the web application.
+Model Retraining: Allow users with the option to retrain the existing model using the input data in the application along with the result obtained.
+Hierarchical Ensemble Model: Sequentially tested distributed architecture for model creation with bigger datasets and achieved an accuracy of 96.25%.
+Wellbeing Survey: Allows users to fill a survey form and get overall scores based on responses using Ryff's Scale Of Psychological Wellbeing.
+Technologies Used
+Programming Languages:
+Python 3.x
+Frameworks and Libraries:
+NLP and Machine Learning:
+scikit-learn, TensorFlow, transformers, torch
+pandas, numpy, joblib
+nltk, spaCy, deep-translator
+OCR and Translation:
+pytesseract, Pillow, google-generativeai
+Web Deployment:
+Streamlit, pyngrok
+Audio and Speech Processing:
+pydub, sounddevice, SpeechRecognition, PyAudio, wavio
+openai-whisper, librosa, deepface
+Social Media Integration:
+tweepy, praw
+Video and Image Processing:
+opencv-python, Pillow
+Tools:
+Development: Google Colab, Jupyter Notebook
+Version Control: Git
+Deployment: Streamlit Cloud, ngrok
