@@ -92,6 +92,7 @@ body {
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    margin-top: 10rem
 }
 
 .subtitle {
@@ -224,6 +225,7 @@ footer {
     margin: 0 auto;
     position: relative;
     perspective: 1000px;
+    
 }
 
 .carousel {
@@ -245,6 +247,13 @@ footer {
     transform: translateZ(0);
     transition: transform 0.3s ease;
     border: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+.carousel-slide img {
+    display: flex;
+    width: 100%; /* Image takes full width of its container */
+    height: auto; /* Maintains aspect ratio */
+    
 }
 
 .carousel-slide:hover {
